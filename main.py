@@ -34,7 +34,8 @@ file_path = r'/app/streamlit-audio-rec/audio_files/1.wav'
     # Replace with the actual file path
 
     # Check if the file exists before proceeding
-if os.path.exists(file_path):  
+if os.path.exists(file_path):
+    st.write("File Found ")
     recognizer = sr.Recognizer()
     with sr.AudioFile(file_path) as source:
         text=""
