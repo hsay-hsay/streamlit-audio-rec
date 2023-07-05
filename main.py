@@ -24,7 +24,7 @@ def audiorec_demo_app():
 
 audiorec_demo_app()
 
-saved_file = wave.open(os.path.join(folder_path, '1.wav'))
+# saved_file = wave.open(os.path.join(folder_path, '1.wav'))
 
-if saved_file is not None:
-    st.audio(saved_file, format='audio/wav')
+# if saved_file is not None:
+#     st.audio(saved_file, format='audio/wav')
