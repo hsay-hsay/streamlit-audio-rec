@@ -34,16 +34,16 @@ file_path = '/app/streamlit-audio-rec/audio_files/1.wav'
     # Replace with the actual file path
 
     # Check if the file exists before proceeding
-    if os.path.exists(file_path):  
-        recognizer = sr.Recognizer()
-        with sr.AudioFile(file_path) as source:
-            text=""
-            audio = recognizer.record(source)  # Read the entire audio file
+if os.path.exists(file_path):  
+    recognizer = sr.Recognizer()
+    with sr.AudioFile(file_path) as source:
+        text=""
+        audio = recognizer.record(source)  # Read the entire audio file
             # Use the recognizer to convert audio to text
-            text = recognizer.recognize_google(audio)
-            st.write("You said:",text)
-            print("You said:", text)
-            question = text
+        text = recognizer.recognize_google(audio)
+        st.write("You said:",text)
+        print("You said:", text)
+        question = text
             # Additional code to utilize the 'text' variable as needed
-    else:
-        print(f"File '{file_path}' does not exist. Cannot perform audio recognition.")
+else:
+    print(f"File '{file_path}' does not exist. Cannot perform audio recognition.")
