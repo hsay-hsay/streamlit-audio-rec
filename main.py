@@ -20,7 +20,7 @@ def audiorec_demo_app():
             file_path = os.path.join(folder_path, '1.wav')
             with open(file_path, 'wb') as file:
                 file.write(wav_audio_data)
-            print(f"Audio file saved at: {file_path}")
+                st.warning(f"Audio file saved at: {os.path.abspath(file_path)}")
 
 audiorec_demo_app()
 
