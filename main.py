@@ -1,7 +1,7 @@
 import streamlit as st
 from st_custom_components import st_audiorec
 import os
-import speech_recognition as sr
+# import speech_recognition as sr
 
 folder_path = 'audio_files'  
 if not os.path.exists(folder_path):
