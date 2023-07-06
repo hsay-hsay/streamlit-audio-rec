@@ -2,7 +2,7 @@ import streamlit as st
 from st_custom_components import st_audiorec
 import os
 import wave
-# import speech_recognition as sr
+import speech_recognition as sr
 
 folder_path = 'audio_files'  
 if not os.path.exists(folder_path):
@@ -28,3 +28,23 @@ audiorec_demo_app()
 
 # if saved_file is not None:
 #     st.audio(saved_file, format='audio/wav')
+
+
+file_path = r'/app/streamlit-audio-rec/audio_files/1.wav'  
+    # Replace with the actual file path
+
+    # Check if the file exists before proceeding
+if os.path.exists(file_path):
+    st.write("File Found ")
+    recognizer = sr.Recognizer()
+    with sr.AudioFile(file_path) as source:
+        text=""
+        audio = recognizer.record(source)  # Read the entire audio file
+            # Use the recognizer to convert audio to text
+        text = recognizer.recognize_google(audio)
+        st.write("You said:",text)
+        print("You said:", text)
+        question = text
+            # Additional code to utilize the 'text' variable as needed
+else:
+    print(f"File '{file_path}' does not exist. Cannot perform audio recognition.")
