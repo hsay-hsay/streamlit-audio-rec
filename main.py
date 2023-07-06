@@ -30,7 +30,7 @@ audiorec_demo_app()
 #     st.audio(saved_file, format='audio/wav')
 
 
-file_path = r'/app/streamlit-audio-rec/audio_files/1.wav'  
+file_path = 'audio_files/1.wav'  
     # Replace with the actual file path
 
     # Check if the file exists before proceeding
